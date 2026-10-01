@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>商场扶梯启停巡检与封控复开平台</title>
+<link rel="stylesheet" href="/app.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark"></span>
+    <div>
+      <h1>商场扶梯启停巡检与封控复开平台</h1>
+      <div class="brand-sub">星河广场 · 设备运维中心 · 演示数据</div>
+    </div>
+  </div>
+  <div class="top-right">
+    <div class="clock" id="clock">--:--:--</div>
+    <label class="identity">
+      <span>当前身份</span>
+      <select id="identity"></select>
+    </label>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button data-tab="map" class="active">楼层设备图</button>
+  <button data-tab="checklist">开梯清单</button>
+  <button data-tab="status">运行状态</button>
+  <button data-tab="lockdown">封控计时</button>
+  <button data-tab="tickets">报修进度</button>
+  <button data-tab="recheck">复检审批</button>
+  <button data-tab="detour">客流绕行</button>
+  <button data-tab="events">事件查询</button>
+</nav>
+
+<main id="main">
+  <section id="tab-map" class="tab active"></section>
+  <section id="tab-checklist" class="tab"></section>
+  <section id="tab-status" class="tab"></section>
+  <section id="tab-lockdown" class="tab"></section>
+  <section id="tab-tickets" class="tab"></section>
+  <section id="tab-recheck" class="tab"></section>
+  <section id="tab-detour" class="tab"></section>
+  <section id="tab-events" class="tab"></section>
+</main>
+
+<div class="modal-mask" id="modalMask" hidden>
+  <div class="modal" id="modal"></div>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script src="/app.js"></script>
+</body>
+</html>
